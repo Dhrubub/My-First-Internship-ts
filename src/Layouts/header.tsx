@@ -8,10 +8,9 @@ import {
   Menu,
   MenuItem,
 } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
 
-import MyMenu from "./menu";
+import MyBody from "./body";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -42,6 +41,12 @@ export default function ButtonAppBar() {
     setOpen(false);
   };
 
+  const options = ["Home", "My Work", "My Profile"];
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const handleSelect = (index: number) => {
+    setSelectedIndex(index);
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.color}>
@@ -53,7 +58,20 @@ export default function ButtonAppBar() {
             aria-label="menu"
           >
             <MenuIcon onClick={handleOpen} />
-            <MyMenu isOpen={isOpen} handleClose={handleClose} />
+            <Menu open={isOpen} onClose={handleClose}>
+              {options.map((option, index) => (
+                <MenuItem
+                  key={option}
+                  onClick={() => {
+                    handleClose();
+                    handleSelect(index);
+                  }}
+                  selected={index === selectedIndex}
+                >
+                  {option}
+                </MenuItem>
+              ))}
+            </Menu>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Takor Internship
@@ -63,6 +81,8 @@ export default function ButtonAppBar() {
           </Typography>
         </Toolbar>
       </AppBar>
+
+      <MyBody selectedIndex={selectedIndex} />
     </div>
   );
 }
