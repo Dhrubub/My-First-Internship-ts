@@ -3,10 +3,10 @@ import "./App.css";
 import { Header, Footer } from "./Layouts/index";
 
 function App() {
+  document.getElementById("home");
   return (
-    <div className="App">
+    <div>
       <Header />
-      <h1>hello</h1>
       <Footer />
     </div>
   );

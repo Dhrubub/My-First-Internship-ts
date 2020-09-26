@@ -14,10 +14,22 @@ code {
 
 .link {
   padding: 8px;
-  color: lightgray;
+  color: rgb(168, 167, 167);
 }
 
 .link:hover {
   color: white;
   cursor: pointer;
+}
+
+.link:active {
+  color: skyblue;
+}
+
+.link:visited {
+  color: skyblue;
+}
+
+.focus.link {
+  color: skyblue;
 }

@@ -1,72 +1,68 @@
-import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import { Grid, Divider } from "@material-ui/core";
-import "bootstrap/dist/css/bootstrap.css";
+import React, { useState } from "react";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import MenuIcon from "@material-ui/icons/Menu";
 
-const Header = () => {
+import MyMenu from "./menu";
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+    color: {
+      backgroundColor: "#454545",
+    },
+  })
+);
+
+export default function ButtonAppBar() {
+  const classes = useStyles();
+  const [isOpen, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <AppBar
-      position="static"
-      style={{ backgroundColor: "#3f434d", padding: "8px" }}
-    >
-      <Toolbar>
-        <Grid container sm>
-          <Grid item>
-            <Typography variant="h5" color="inherit">
-              Takor Internship
-            </Typography>
-          </Grid>
-          <Divider
-            orientation="vertical"
-            variant="middle"
-            flexItem
-            style={{
-              marginRight: "8px",
-              marginLeft: "8px",
-              backgroundColor: "black",
-            }}
-          />
-          <Grid item>
-            <Typography variant="h6" color="inherit">
-              Dhruv
-            </Typography>
-          </Grid>
-        </Grid>
-
-        <Grid container sm>
-          <Grid item className="ml-auto">
-            <ul
-              style={{
-                listStyleType: "none",
-                display: "flex",
-                margin: "auto",
-                marginRight: "40px",
-              }}
-            >
-              <li className="link">
-                <a>Home</a>
-              </li>
-              <li className="link">
-                <a>About me</a>
-              </li>
-              <li className="link">
-                <a>Contact Me</a>
-              </li>
-            </ul>
-            {/* <Typography
-              variant="body1"
-              color="inherit"
-              style={{ marginRight: "8px" }}
-            >
-              Home
-            </Typography> */}
-          </Grid>
-
-          <Grid item></Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
+    <div className={classes.root}>
+      <AppBar position="static" className={classes.color}>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon onClick={handleOpen} />
+            <MyMenu isOpen={isOpen} handleClose={handleClose} />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Takor Internship
+          </Typography>
+          <Typography variant="h6" color="inherit">
+            Dhruv
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
-};
-
-export default Header;
+}
