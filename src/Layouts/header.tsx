@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+
+import logo from "../images/logo2.png";
+import profile from "../images/IMG_1653.jpg";
+
 import {
   AppBar,
   Toolbar,
@@ -24,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     color: {
-      backgroundColor: "#454545",
+      backgroundColor: "#343a40",
     },
   })
 );
@@ -62,22 +66,38 @@ export default function ButtonAppBar() {
               {options.map((option, index) => (
                 <MenuItem
                   key={option}
+                  selected={index === selectedIndex}
+                  className="alert-info menu"
                   onClick={() => {
                     handleClose();
                     handleSelect(index);
                   }}
-                  selected={index === selectedIndex}
                 >
+                  {index === 0 && <i className="fa fa-home icon" />}
+                  {index === 1 && <i className="fa fa-tasks icon" />}
+                  {index === 2 && <i className="fa fa-user icon" />}
+
                   {option}
                 </MenuItem>
               ))}
             </Menu>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Takor Internship
+            <img src={logo} height="50px" />
+            <span>Takor Internship</span>
           </Typography>
-          <Typography variant="h6" color="inherit">
-            Dhruv
+          <Typography
+            variant="h6"
+            color="inherit"
+            style={{ marginRight: "10px" }}
+          >
+            <img
+              src={profile}
+              height="40px"
+              width="40px"
+              style={{ borderRadius: "50%", marginRight: "10px" }}
+            />
+            <span>Dhruv</span>
           </Typography>
         </Toolbar>
       </AppBar>

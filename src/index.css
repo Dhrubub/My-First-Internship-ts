@@ -12,24 +12,10 @@ code {
     monospace;
 }
 
-.link {
-  padding: 8px;
-  color: rgb(168, 167, 167);
+.icon {
+  padding: 10px;
 }
 
-.link:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.link:active {
-  color: skyblue;
-}
-
-.link:visited {
-  color: skyblue;
-}
-
-.focus.link {
-  color: skyblue;
+.menu:focus {
+  background-color: rgb(52, 58, 64, 0.5) !important ;
 }
