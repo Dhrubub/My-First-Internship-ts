@@ -46,7 +46,7 @@ export default function ButtonAppBar() {
   };
 
   const options = ["Home", "My Work", "My Profile"];
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const handleSelect = (index: number) => {
     setSelectedIndex(index);
   };
@@ -90,7 +90,8 @@ export default function ButtonAppBar() {
             <img src={logo} height="50px" />
             <span>
               <a
-                href="https://takor.com.au/"
+                href="https://takor.com.au/" 
+                target="_blank"
                 style={{ textDecoration: "none", color: "white", marginRight: "3px" }}
               >
                 Takor

@@ -5,10 +5,8 @@ import {Card} from "@material-ui/core"
 import Collapse from 'react-bootstrap/Collapse'
 
 const MyWork = () => {
-  const [index, setIndex] = useState(0);
   const [view, setView] = useState(false);
   
-
   const open = [false,
   false,
   false,
@@ -22,7 +20,7 @@ const MyWork = () => {
     {
       title: "Note taking app",
       photo: {before: "", after: ""},
-      video: "",
+      video: "assets/images/Note-taking2.mp4",
       caption: "My first task was to create a simple note taking app.",
     },
     {
@@ -41,14 +39,14 @@ const MyWork = () => {
     {
       title: "Drone video markers",
       photo: {before: "", after: ""},
-      video: "assets/images/Video-marker.mp4",
+      video: "assets/images/Video-marker2.mp4",
       caption: "Working on an experimental feature, I had to create a marker that would play a video \
-      when clicked on."
+      when it was clicked on."
     },
     {
       title: "Changing coordinates",
       photo: {before: "", after: ""},
-      video: "",
+      video: "assets/images/ChangeCoordinates.mp4",
       caption: "Working with react leaflet, I was given a task to be able to change the display coordinates with \
       the click of a button. I also had to make additional UI changes."
     },
@@ -98,7 +96,7 @@ const MyWork = () => {
             <div className="work-video">
               {task.video != "" && <div>
                   <h3>A video demonstration</h3>
-                  <video controls className="work-image" src="assets/images/Video-marker.mp4"/>
+                  <video controls className="work-image" src={task.video}/>
                 </div>}
             </div>
           </div>

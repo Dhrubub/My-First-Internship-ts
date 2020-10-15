@@ -76,7 +76,7 @@ code {
 
 .home-images img {
   padding: 10px;
-  max-height: 450px;
+  max-height: 500px;
   max-width: 750px;
   background-color: #99591a;
   border: 5px solid rgb(30,30,30);
@@ -143,9 +143,10 @@ code {
   padding: 10px;
 }
 .work-before,
-.work-after {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.work-after,
+.work-video {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .work-image {
   padding: 20px;
