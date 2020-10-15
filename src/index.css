@@ -6,6 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+tr,
+td,
+span,
+strong,
+div,
+input {
+  font-family: monospace !important;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -16,6 +33,70 @@ code {
   padding: 10px;
 }
 
+
+
 .menu:focus {
   background-color: rgb(52, 58, 64, 0.5) !important ;
+}
+
+.Footer {
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  height: 20vh;
+  padding: 20px;
+  background-color: pink;
+  background-color: rgb(52, 58, 64)
+}
+
+.myprofile-container {
+  padding: 30px;
+  width: 50%;
+  margin: auto;
+}
+
+.myprofile-card {
+  padding: 20px;
+}
+
+.background-image {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  opacity: 1;
+  z-index: -1;
+}
+
+
+.myprofile-header {
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.myprofile-photo {
+  border-radius: 50%;
+  height: 200px;
+}
+
+.myprofile-name {
+  position: relative;
+  margin-top: 25px;
+}
+
+.myprofile-description {
+  text-align: center;
+  padding: 10px;
+}
+
+.myprofile-section {
+  text-align: center;
+}
+
+
+.myprofile-image {
+  height: 80px;
+  padding: 20px;
 }

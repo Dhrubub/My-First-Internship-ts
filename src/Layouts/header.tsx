@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 import logo from "../images/logo2.png";
-import profile from "../images/IMG_1653.jpg";
+import profile from "../images/dhruv.jpg";
 
 import {
   AppBar,
@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 
 import MyBody from "./body";
+import Footer from './footer'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -46,7 +47,7 @@ export default function ButtonAppBar() {
   };
 
   const options = ["Home", "My Work", "My Profile"];
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(2);
   const handleSelect = (index: number) => {
     setSelectedIndex(index);
   };
@@ -84,7 +85,15 @@ export default function ButtonAppBar() {
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             <img src={logo} height="50px" />
-            <span>Takor Internship</span>
+            <span>
+              <a
+                href="https://takor.com.au/"
+                style={{ textDecoration: "none", color: "white", marginRight: "3px" }}
+              >
+                Takor
+              </a>
+              Internship
+            </span>
           </Typography>
           <Typography
             variant="h6"
@@ -102,7 +111,7 @@ export default function ButtonAppBar() {
         </Toolbar>
       </AppBar>
 
-      <MyBody selectedIndex={selectedIndex} />
+      <MyBody selectedIndex={selectedIndex} />  
     </div>
   );
 }
