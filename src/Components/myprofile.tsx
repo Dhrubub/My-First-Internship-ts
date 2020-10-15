@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Typography} from "@material-ui/core"
+import {Card} from "@material-ui/core"
 
 import profile from "../images/dhruv.jpg";
 import github from "../images/github.png"
@@ -13,7 +13,6 @@ const MyProfile = () => {
     <div className="myprofile-container">
       <Card className="myprofile-card">
         <div className="myprofile-header alert-info">
-          <div className="myprofile-background"></div>
           <img className="myprofile-photo" src={profile}/>
           <h1 className="myprofile-name">Dhruv Jobanputra</h1>
         </div>

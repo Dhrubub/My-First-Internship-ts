@@ -33,28 +33,72 @@ code {
   padding: 10px;
 }
 
+.menu {
 
+}
 
 .menu:focus {
   background-color: rgb(52, 58, 64, 0.5) !important ;
 }
 
-.Footer {
+.home-container {
+  padding: 30px;
+  width: 80%;
+  margin: auto;
   position: absolute;
-  color: white;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  height: 20vh;
-  padding: 20px;
-  background-color: pink;
-  background-color: rgb(52, 58, 64)
+  left: 10%;
 }
 
+.home-initial {
+  padding: 100px;
+  text-align: center;
+}
+
+.home-initial:hover {
+  cursor: pointer;
+  color: black;
+  filter: brightness(50%);
+  transition: all 600ms ease;
+}
+
+.home-images {
+  text-align: center;
+  padding: 10px;  
+}
+
+.home-images img:hover {
+  cursor: pointer;
+  color: black;
+  filter: brightness(50%);
+  transition: all 600ms ease;
+}
+
+.home-images img {
+  padding: 10px;
+  max-height: 450px;
+  max-width: 750px;
+  background-color: #99591a;
+  border: 5px solid rgb(30,30,30);
+}
+
+.home-caption {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  margin-left: 25%;
+  width: 50%;
+  border: 2px solid rgb(30,30,30);
+
+}
+
+.header-menu { 
+}
 .myprofile-container {
   padding: 30px;
   width: 50%;
   margin: auto;
+  position: absolute;
+  left: 25%;
 }
 
 .myprofile-card {
@@ -65,15 +109,14 @@ code {
   position: fixed;
   height: 100vh;
   width: 100%;
-  opacity: 1;
+  opacity: 0.8;
   z-index: -1;
 }
 
 
 .myprofile-header {
   text-align: center;
-  padding: 10px;
-  
+  padding: 10px; 
 }
 
 .myprofile-photo {
@@ -94,7 +137,6 @@ code {
 .myprofile-section {
   text-align: center;
 }
-
 
 .myprofile-image {
   height: 80px;

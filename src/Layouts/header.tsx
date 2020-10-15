@@ -15,7 +15,6 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 
 import MyBody from "./body";
-import Footer from './footer'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -47,7 +46,7 @@ export default function ButtonAppBar() {
   };
 
   const options = ["Home", "My Work", "My Profile"];
-  const [selectedIndex, setSelectedIndex] = useState(2);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const handleSelect = (index: number) => {
     setSelectedIndex(index);
   };
@@ -63,9 +62,13 @@ export default function ButtonAppBar() {
             aria-label="menu"
           >
             <MenuIcon onClick={handleOpen} />
-            <Menu open={isOpen} onClose={handleClose}>
+            <Menu 
+              className="header-menu" 
+              open={isOpen} 
+              onClose={handleClose}>
               {options.map((option, index) => (
                 <MenuItem
+
                   key={option}
                   selected={index === selectedIndex}
                   className="alert-info menu"
