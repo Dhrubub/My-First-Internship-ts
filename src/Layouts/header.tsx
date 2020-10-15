@@ -46,14 +46,14 @@ export default function ButtonAppBar() {
   };
 
   const options = ["Home", "My Work", "My Profile"];
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(1);
   const handleSelect = (index: number) => {
     setSelectedIndex(index);
   };
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.color}>
+      <AppBar position="fixed" className={classes.color}>
         <Toolbar>
           <IconButton
             edge="start"

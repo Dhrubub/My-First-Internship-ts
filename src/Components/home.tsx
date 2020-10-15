@@ -39,7 +39,7 @@ const Home = () => {
   ]
 
   return (
-    <div className="home-container mt-3">
+    <div className="home-container">
       {
         !view && 
         <div>
