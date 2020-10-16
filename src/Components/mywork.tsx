@@ -4,6 +4,10 @@ import {Card} from "@material-ui/core"
 
 import Collapse from 'react-bootstrap/Collapse'
 
+import github from "../images/github.png"
+import react from "../images/react4.png"
+import typescript from "../images/typescript2.png"
+
 const MyWork = () => {
   const [view, setView] = useState(false);
   
@@ -61,6 +65,9 @@ const MyWork = () => {
         onClick={()=>setView(true)}>
         <h3>Throughout the internship, I made use of React.js, Typescript, Github and various CSS frameworks 
           such as material-ui, bootstrap and reactstrap. Click anywhere to view the work I did. </h3>
+          <img className="work-image-icon" src={react}/>
+          <img className="work-image-icon" src={typescript}/>
+          <img className="work-image-icon" src={github}/>
       </Card>
     </div>
   }

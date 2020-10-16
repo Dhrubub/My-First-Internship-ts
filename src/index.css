@@ -116,7 +116,12 @@ code {
   filter: brightness(50%);
   transition: all 600ms ease;
 }
-
+.work-image-icon {
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  padding: 15px;
+}
 .work-content-home {
   margin-bottom: 25px;
 }
@@ -148,6 +153,7 @@ code {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .work-image {
   padding: 20px;
   max-width: 600px;
